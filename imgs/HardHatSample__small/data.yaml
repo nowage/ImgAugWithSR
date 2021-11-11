@@ -1,0 +1,5 @@
+train: /prj/nowage/ImgAugWithSR/imgs/HardHatSample__small/train/images
+val: /prj/nowage/ImgAugWithSR/imgs/HardHatSample__small/valid/images
+
+nc: 1
+names: ['hardHat']
