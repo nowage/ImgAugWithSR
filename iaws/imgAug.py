@@ -96,13 +96,13 @@ def bbsImgAugToBbsYolo5(img,bbs):
     ox=w/2  # origin x
     oy=h/2  # origin y
     for bb in bbs:
-        c0=bb.label
-        c1= ((bb.x2 + bb.x1)/2 ) / w
-        c2= ((bb.y2 + bb.y1)/2) / h
-        c3= abs(bb.x2 - bb.x1)/w
-        c4= abs(bb.y2 - bb.y1)/h
+        c0 = bb.label
+        c1 = ((bb.x2 + bb.x1)/2 ) / w
+        c2 = ((bb.y2 + bb.y1)/2) / h
+        c3 = abs(bb.x2 - bb.x1)/w
+        c4 = abs(bb.y2 - bb.y1)/h
         bbsYolo5.append([c0,c1,c2,c3,c4])
-        df_bbsYolo5=pd.DataFrame(bbsYolo5)
+    df_bbsYolo5 = pd.DataFrame(bbsYolo5)
     return df_bbsYolo5
 
 
@@ -204,7 +204,9 @@ def imgAugCropTo9Batch(images_super_path, labels_super_path, images_chopped_path
             chopped_bbs_name = file_name + '_' + str(i) + '.txt'
             chopped_img_name = file_name + '_' + str(i) + '.jpg'
             ## nowage
-            print( len( imgs[i]), (bbsImgAug))
+            # print( len( imgs[i]) )
+            # print( len(bbsImgAug) )
+            # ##
             bbsYolo5 = bbsImgAugToBbsYolo5(imgs[i], bbsImgAug)
             bbsYolo5.to_csv(labels_chopped_path + chopped_bbs_name, sep=' ', header=False, index=False)
             imsave(images_chopped_path + chopped_img_name, imgs[i])
