@@ -1,8 +1,14 @@
 # Result files
-imgs/HardHatSample__small/images_cropped/
-imgs/HardHatSample__small/images_resized/
-imgs/HardHatSample__small/labels_chopped/
-
+imgs/HardHatSample__small/images_chopped
+imgs/HardHatSample__small/images_cropped
+imgs/HardHatSample__small/images_cropped_hh
+imgs/HardHatSample__small/images_cropped_noHh
+imgs/HardHatSample__small/labels_chopped
+imgs/HardHatSample__small/labels_resized
+imgs/HardHatSample__all/images_chopped
+imgs/HardHatSample__all/images_resized
+imgs/HardHatSample__all/labels_chopped
+imgs/HardHatSample__all/labels_resized
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
