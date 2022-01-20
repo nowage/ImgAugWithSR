@@ -132,6 +132,7 @@ def imgAugCropTo9(img, bs, isImageWithBb=False, size=400):
         images_croped.append(image_aug)
 
     return (images_croped, bbs_croped)
+
 def bsJustify(img, bs):
     '''
     칸이 넘어가는 바운딩박스를 제거하거나 자름
@@ -202,6 +203,8 @@ def imgAugCropTo9Batch(images_super_path, labels_super_path, images_chopped_path
         for bbsImgAug in bbs:
             chopped_bbs_name = file_name + '_' + str(i) + '.txt'
             chopped_img_name = file_name + '_' + str(i) + '.jpg'
+            ## nowage
+            print( len( imgs[i]), (bbsImgAug))
             bbsYolo5 = bbsImgAugToBbsYolo5(imgs[i], bbsImgAug)
             bbsYolo5.to_csv(labels_chopped_path + chopped_bbs_name, sep=' ', header=False, index=False)
             imsave(images_chopped_path + chopped_img_name, imgs[i])
