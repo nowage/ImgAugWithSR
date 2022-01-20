@@ -1,3 +1,9 @@
+# Result files
+imgs/HardHatSample__small/images_cropped/
+imgs/HardHatSample__small/images_resized/
+imgs/HardHatSample__small/labels_chopped/
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
